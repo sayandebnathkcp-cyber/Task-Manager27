@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character encoding and responsive design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <!-- Link to external CSS file (NO inline CSS) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main container that holds the entire app -->
+    <div class="container">
+
+        <!-- Header section with title and short description -->
+        <header class="app-header">
+            <h1>My Task Manager</h1>
+            <p class="subtitle">Stay organized. Get things done.</p>
+        </header>
+
+        <!-- Input area: text field + Add button to create new tasks -->
+        <section class="input-section">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                maxlength="120"
+            >
+            <button id="addBtn" type="button">Add Task</button>
+        </section>
+
+        <!-- Small stats bar showing total and completed task counts -->
+        <section class="stats">
+            <span id="totalCount">Total: 0</span>
+            <span id="completedCount">Completed: 0</span>
+        </section>
+
+        <!-- The list where tasks will be displayed dynamically by JS -->
+        <ul id="taskList" class="task-list"></ul>
+
+        <!-- Message shown when there are no tasks -->
+        <p id="emptyMessage" class="empty-message">No tasks yet. Add one above!</p>
+    </div>
+
+    <!-- Link to external JavaScript file (NO inline JS) -->
+    <script src="script.js"></script>
+</body>
+</html>
